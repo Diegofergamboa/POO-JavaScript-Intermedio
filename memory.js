@@ -38,5 +38,11 @@ for (propiedad in objeto1) {
 const objeto3 = Object.asign({}, objeto1);
 
 const objetot4 = Object.create(objeto1);
+// Crea en proto una instancia con todas las propiedades del objeto 1.
 
+// Si cambiamos una de las propiedades la podremos cambiar porque están en proto
+
+// Es con el .create como si crearamos que se colocaran nuevos objetos dentro de otros objetos, es decir colocaramos nuevas caracteristicas, unas cambiadas en proto y las otras en el objeto ordinario.
+
+// Y, las copias originales si son modificadas con el Object.create
 
