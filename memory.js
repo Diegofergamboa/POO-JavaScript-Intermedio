@@ -28,4 +28,7 @@ const objeto2 = {};
 
 for (propiedad in objeto1) {
     objeto2[propiedad] = objeto1[propiedad];
-}
+} 
+
+// Si se intentan hacer modificaciones sobre esta linea de código, sigue cambiando normal. Pero, cómo ahora el objeto 1 y 2 tienen un objeto como propiedad. Lo que va a pasar es que se va a modificar el objeto 1 igualmente después de modificar el objeto 2
+
