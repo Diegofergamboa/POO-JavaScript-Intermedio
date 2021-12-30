@@ -32,3 +32,11 @@ for (propiedad in objeto1) {
 
 // Si se intentan hacer modificaciones sobre esta linea de código, sigue cambiando normal. Pero, cómo ahora el objeto 1 y 2 tienen un objeto como propiedad. Lo que va a pasar es que se va a modificar el objeto 1 igualmente después de modificar el objeto 2
 
+// Craashea cuando tiene otro objeto.
+
+// Copia los objetos del objeto origiual
+const objeto3 = Object.asign({}, objeto1);
+
+const objetot4 = Object.create(objeto1);
+
+
