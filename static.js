@@ -22,7 +22,25 @@ console.log(Object.entries(juan))
     Object.entries(juan)[3];
     // nos muestra el array de add Course
 
-    
+    Object.entries(juan)[3][1]('Curso 3');
+    // Ahora va a hacer referencia al array, esto porque o está mostrando como un array, es decir this ya no es el objeto juan, sino el array donde está guardada la función.
+    // Importante ver a donde se envian los datos d ela función.
+
+
+console.log(Object.getOwnPropertyDescriptors(juan));
+// Aqui nos va a mostrar un objeto con cada una de las propiedades del objeto Juan
+// Además nos va a arrojar, lo que es configurable, enumerable y, writable. ¿Que són?
+
+
+// la misma manera de agregar un nuevo valor es decir hacer asignación
+Object.defineProperty(juan, "prueba" , {
+    value : "Aqui va el valor del anuevo atributo lalmada prueba" ,
+    writable : true ,
+    enumerable : true ,
+    configurable : true 
+})
+// Recibe tres parámetros 1. el nombre del objeto 2. el nombre del nuevo atributo o propiedad que queremos definir y, 3. la lista de atributos con un {}
+
 
 
 
