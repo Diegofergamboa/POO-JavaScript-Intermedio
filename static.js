@@ -34,7 +34,7 @@ console.log(Object.getOwnPropertyDescriptors(juan));
 
 // la misma manera de agregar un nuevo valor es decir hacer asignación
 Object.defineProperty(juan, "prueba" , {
-    value : "Aqui va el valor del anuevo atributo lalmada prueba" ,
+    value : "Aqui va el valor del anuevo atributo llamada prueba" ,
     writable : true ,
     enumerable : true ,
     configurable : true 
@@ -44,3 +44,9 @@ Object.defineProperty(juan, "prueba" , {
 
 
 
+Object.defineProperty(juan, "" , {
+    value : "" ,
+    writable : true ,
+    enumerable : true ,
+    configurable : true 
+})
