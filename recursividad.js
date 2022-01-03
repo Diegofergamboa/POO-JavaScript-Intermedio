@@ -30,6 +30,7 @@ function recursiva(numbersArray) {
         const firstNumber = numbersArray[0];
         console.log(firstNumber);
         numbersArray.shift();
-        return recursiva(numbersArray);
+        recursiva(numbersArray);
     }
 }
+
