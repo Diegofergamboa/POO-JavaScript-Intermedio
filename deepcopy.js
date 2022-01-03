@@ -19,8 +19,8 @@ function deepCopy(subject) {
     let copySubject;
 
     //Comenzamos la validación
-    const subjectIsArray = isArray(subject);
     const subjectIsObject = isObject(subject);
+    const subjectIsArray = isArray(subject);
 
     // Hacemos la validación de si es un objeto o un array
     if (subjectIsArray) {
@@ -33,15 +33,20 @@ function deepCopy(subject) {
 
     for (key in subject) {
         const keyIsObject = isObject(subject[key]);
-        
+        // const keyIsArray = isArray(subject[key]);
+
         if (keyIsObject) {
             copySubject[key] = deepCopy(subject[key]);
         } else {
             if (subjectIsArray) {
                 copySubject.push(subject[key]);
             }
+            else {
+                copySubject[key] = subject[key];
+            }
         }
     }
 
+    //Output independiente de lo que sea
     return copySubject;
 }
