@@ -56,7 +56,8 @@ const studentBase = {
 };
 
 const juan = deepCopy(studentBase);
-Object.defineProperty(juan, "name", {
-    value: "Juanito" ,
-    configurable: false ,
-})
+Object.seal(juan) // Con esto no dejamos que se borren las propiedades.
+// Object.defineProperty(juan, "name", {
+//     value: "Juanito" ,
+//     configurable: false ,
+// })
