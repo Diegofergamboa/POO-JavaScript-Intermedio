@@ -41,3 +41,21 @@ function deepCopy(subject) {
     //Output independiente de lo que sea
     return copySubject;
 }
+
+const studentBase = {
+    name: undefined ,
+    email: undefined ,
+    age: undefined, 
+    approvedCourses : undefined ,
+    learningPaths: undefined ,
+    socialMedia : {
+        twitter: undefined ,
+        instagram: undefined, 
+        facebook: undefined ,
+    },
+};
+
+const juan = deepCopy(studentBase);
+Object.defineProperty(juan, "name", {
+    value: "Juanito" ,
+})
