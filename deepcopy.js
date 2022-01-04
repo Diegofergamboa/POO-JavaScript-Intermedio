@@ -42,24 +42,40 @@ function deepCopy(subject) {
     return copySubject;
 }
 
-const studentBase = {
-    name: undefined ,
-    email: undefined ,
-    age: undefined, 
-    approvedCourses : undefined ,
-    learningPaths: undefined ,
-    socialMedia : {
-        twitter: undefined ,
-        instagram: undefined, 
-        facebook: undefined ,
-    },
-};
+// const studentBase = {
+//     name: undefined ,
+//     email: undefined ,
+//     age: undefined, 
+//     approvedCourses : undefined ,
+//     learningPaths: undefined ,
+//     socialMedia : {
+//         twitter: undefined ,
+//         instagram: undefined, 
+//         facebook: undefined ,
+//     },
+// };
 
-const juan = deepCopy(studentBase);
-Object.seal(juan) // Con esto no dejamos que se borren las propiedades.
-// Object.defineProperty(juan, "name", {
-//     value: "Juanito" ,
-//     configurable: false ,
-// })
+// const juan = deepCopy(studentBase);
+// Object.seal(juan) // Con esto no dejamos que se borren las propiedades.
+// // Object.defineProperty(juan, "name", {
+// //     value: "Juanito" ,
+// //     configurable: false ,
+// // })
 
-Object.isSealed(juan) // Verificar si las propiedades de nuestro objeto tiene la protección de tener configurable como false.
+// Object.isSealed(juan) // Verificar si las propiedades de nuestro objeto tiene la protección de tener configurable como false.
+
+function createStudent({
+    name,
+    edad,
+    email,
+}) {
+    return {
+        name,
+        age,
+        socialMedia: {
+
+        }
+    };
+}
+
+const juan = createStudent();
