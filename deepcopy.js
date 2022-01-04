@@ -1,13 +1,4 @@
 
-const obj1 = {
-    a : 'a' ,
-    b: 'b' ,
-    c : {
-        d : 'd' ,
-        e: 'e' ,
-    } ,
-};
-
 function isObject(subject) {
     return typeof subject == "object";
 }
