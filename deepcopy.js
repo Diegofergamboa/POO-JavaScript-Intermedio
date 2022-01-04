@@ -58,4 +58,5 @@ const studentBase = {
 const juan = deepCopy(studentBase);
 Object.defineProperty(juan, "name", {
     value: "Juanito" ,
+    configurable: false ,
 })
