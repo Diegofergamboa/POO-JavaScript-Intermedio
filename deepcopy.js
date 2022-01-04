@@ -61,3 +61,5 @@ Object.seal(juan) // Con esto no dejamos que se borren las propiedades.
 //     value: "Juanito" ,
 //     configurable: false ,
 // })
+
+Object.isSealed(juan) // Verificar si las propiedades de nuestro objeto tiene la protección de tener configurable como false.
