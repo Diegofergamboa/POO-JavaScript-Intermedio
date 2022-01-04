@@ -63,18 +63,31 @@ function deepCopy(subject) {
 // // })
 
 // Object.isSealed(juan) // Verificar si las propiedades de nuestro objeto tiene la protección de tener configurable como false.
+function requiredParam(param) {
+    throw new Error("");
+}
 
 function createStudent({
     name,
-    edad,
     email,
-}) {
+    age,
+    twitter,
+    instagram,
+    facebook,
+    aprovedCourses = [],
+    learningPaths = [],
+} = {}) {
     return {
         name,
+        email,
         age,
         socialMedia: {
-
-        }
+            twitter,
+            instagram,
+            facebook,
+        },
+        aprovedCourses,
+        learningPaths,
     };
 }
 
