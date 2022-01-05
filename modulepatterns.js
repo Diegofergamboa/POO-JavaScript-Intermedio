@@ -10,6 +10,7 @@ function createStudent({
 } = {}) {
     return {
         name,
+        // Actualizar el nombre y, permite ser una propiedad privada.
         changeName(newName) {
             this.name = newName;
         } ,
