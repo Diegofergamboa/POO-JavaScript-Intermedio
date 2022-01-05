@@ -8,12 +8,11 @@ function createStudent({
     aprovedCourses = [],
     learningPaths = [],
 } = {}) {
-    return {
-        name,
-        // Actualizar el nombre y, permite ser una propiedad privada.
-        changeName(newName) {
-            this.name = newName;
-        } ,
+    const private = {
+        "_name" : name,
+    };
+    
+    const public = {
         email,
         age,
         socialMedia: {
@@ -23,6 +22,13 @@ function createStudent({
         },
         aprovedCourses,
         learningPaths,
+        
+    };
+    return {
+        // Actualizar el nombre y, permite ser una propiedad privada.
+        changeName(newName) {
+            this.name = newName;
+        } ,
     };
 }
 
