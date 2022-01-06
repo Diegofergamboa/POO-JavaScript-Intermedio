@@ -22,14 +22,16 @@ function createStudent({
         },
         aprovedCourses,
         learningPaths,
-        
     };
-    return {
-        // Actualizar el nombre y, permite ser una propiedad privada.
-        changeName(newName) {
-            this.name = newName;
-        } ,
+}
+    readName(newName) {
+        return "newName"
     };
+    changeName(newName) {
+        private._name = newName
+    }; 
+
+    return public;
 }
 
 const juan = createStudent({name: "Juanito", email: "juan@email.com"});
