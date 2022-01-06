@@ -22,7 +22,8 @@ function createStudent({
         },
         aprovedCourses,
         learningPaths,
-    } , 
+    }
+} , 
     get name() {
         return private["_name"];
     } ,
@@ -35,7 +36,8 @@ function createStudent({
         return private['_name'];
     
     return public ;
-    }
+    } ,
+}
 
 const diego = createStudent({
     "name" : 'Diego' ,
