@@ -43,3 +43,6 @@ function ipad(procesador, teclado, widthScreen) {
     this.widthScreen = widthScreen ;
 }
 
+Person.prototype.saludo = function () {
+    alert(`hola, mi nombre es ${this.name.first}.`);
+}
